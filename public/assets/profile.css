@@ -1,0 +1,27 @@
+:root {
+    --clr-60: hsl(210, 23%, 95%);
+    --clr-45: hsl(210, 43%, 85%);
+    --clr-30: hsl(204, 75%, 21%);
+    --clr-10: hsl(0, 0%, 0%);
+    --clr-btn2: hsl(174, 51%, 27%);
+
+    font-size: 62.5%;
+}
+
+.profile-container {
+    width: 100%;
+    height: calc(100vh - 60px);
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.profile-wrapper {
+    width: 90%;
+    height: 100%;
+    padding: 10px;
+    border: 1px solid black;
+
+}

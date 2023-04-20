@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/public/assets/main.js" defer></script>
+    <script src="https://kit.fontawesome.com/088b5af8bf.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/public/assets/reset.css">
+    <link rel="stylesheet" href="/public/assets/navigation.css">
+    <link rel="stylesheet" href="/public/assets/profile.css">
+</head>
+<body>
+    <nav class="main-navigation">
+        <div class="menu-bar nav-section">
+            <div class="menu-logo-holder">
+                <a onclick="openMenu()" class="menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+                <a href="./" class="logo-name">E-LEARN</a>
+            </div>
+        </div>
+        <div class="search-bar nav-section">
+            <div class="search-container">
+                <input class="search-input" type="search" placeholder="Search" name="search-bar" id="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+        <div class="side-menu nav-section">
+            <div class="side-nav-holder">
+                <a class="side-nav" href="#">
+                    <i class="fa-regular fa-calendar"></i>
+                </a>
+                <a class="side-nav" href="#">
+                    <i class="fa-regular fa-message"></i>
+                </a>
+                <a class="side-nav" href="#">
+                    <i class="fa-regular fa-solid fa-bell"></i>
+                </a>
+                <a href="/profile" class="profile-box">
+                </a>
+            </div>
+        </div>
+    </nav>
+    <nav id="menu-navigation" class="menu-navigation">
+        <div class="top-section">
+            <div class="eLearn-logo">
+                <div class="logo-holder">
+                    <img src="/public/assets/imgs/E-learn logo.svg" alt="">
+                </div>
+                <h1>E-LEARN</h1>
+            </div>
+            <i onclick="exitMenu()" class="fa-solid fa-xmark"></i>
+        </div>
+        <hr>
+        <div class="main-menu-navigation-container">
+            <a href="/profile" class="nav-profile nav-item">
+                <i class="fa-solid fa-user fa-menu-nav"></i>
+                <h2>My Profile</h2>
+            </a>
+            <a href="#" class="nav-myFiles nav-item">
+                <i class="fa-solid fa-file fa-menu-nav"></i>
+                <h2>My Files</h2>
+            </a>
+            <a href="/eLibrary" class="nav-eLibrary nav-item">
+                <i class="fa-solid fa-book fa-menu-nav"></i>
+                <h2>E-Library</h2>
+            </a>
+            <a href="#" class="nav-eVideos nav-item">
+                <i class="fa-solid fa-play fa-menu-nav"></i>
+                <h2>E-Videos</h2>
+            </a>
+            <a href="#" class="nav-community nav-item">
+                <i class="fa-solid fa-users fa-menu-nav"></i>
+                <h2>Community</h2>
+            </a>
+            <a href="#" class="nav-myFavorites nav-item">
+                <i class="fa-solid fa-star fa-menu-nav"></i>
+                <h2>My Favorites</h2>
+            </a>
+            <a href="#" class="nav-preferences nav-item">
+                <i class="fa-sharp fa-solid fa-asterisk fa-menu-nav"></i>
+                <h2>Preferences</h2>
+            </a>
+            <hr class="divider">
+            <form class="nav-logOut nav-item" action="/logout?_method=DELETE" method="POST">
+                <i class="fa-solid fa-right-from-bracket fa-menu-nav"></i>
+                <button type="submit">Log Out</button>
+            </form>
+        </div>
+    </nav>
+    <main class="profile-container">
+        <div class="profile-wrapper"></div>
+        
+    </main>
+</body>
+</html>

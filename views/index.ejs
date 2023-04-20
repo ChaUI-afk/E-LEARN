@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/public/assets/main.js" defer></script>
+    <script src="https://kit.fontawesome.com/088b5af8bf.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/public/assets/reset.css">
+    <link rel="stylesheet" href="/public/assets/navigation.css">
+    <link rel="stylesheet" href="/public/assets/main.css">
+</head>
+<body>
+
+    <nav class="main-navigation">
+        <div class="menu-bar nav-section">
+            <div class="menu-logo-holder">
+                <a onclick="openMenu()" class="menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+                <a href="./" class="logo-name">E-LEARN</a>
+            </div>
+        </div>
+        <div class="search-bar nav-section">
+            <div class="search-container">
+                <input class="search-input" type="search" placeholder="Search" name="search-bar" id="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+        <div class="side-menu nav-section">
+            <div class="side-nav-holder">
+                <a class="side-nav" href="#">
+                    <i class="fa-regular fa-calendar"></i>
+                </a>
+                <a class="side-nav" href="#">
+                    <i class="fa-regular fa-message"></i>
+                </a>
+                <a class="side-nav" href="#">
+                    <i class="fa-regular fa-solid fa-bell"></i>
+                </a>
+                <a href="/profile" class="profile-box">
+                </a>
+            </div>
+        </div>
+    </nav>
+    <nav id="menu-navigation" class="menu-navigation">
+        <div class="top-section">
+            <div class="eLearn-logo">
+                <div class="logo-holder">
+                    <img src="/public/assets/imgs/E-learn logo.svg" alt="">
+                </div>
+                <h1>E-LEARN</h1>
+            </div>
+            <i onclick="exitMenu()" class="fa-solid fa-xmark"></i>
+        </div>
+        <hr>
+        <div class="main-menu-navigation-container">
+            <a href="/profile" class="nav-profile nav-item">
+                <i class="fa-solid fa-user fa-menu-nav"></i>
+                <h2>My Profile</h2>
+            </a>
+            <a href="#" class="nav-myFiles nav-item">
+                <i class="fa-solid fa-file fa-menu-nav"></i>
+                <h2>My Files</h2>
+            </a>
+            <a href="/eLibrary" class="nav-eLibrary nav-item">
+                <i class="fa-solid fa-book fa-menu-nav"></i>
+                <h2>E-Library</h2>
+            </a>
+            <a href="#" class="nav-eVideos nav-item">
+                <i class="fa-solid fa-play fa-menu-nav"></i>
+                <h2>E-Videos</h2>
+            </a>
+            <a href="#" class="nav-community nav-item">
+                <i class="fa-solid fa-users fa-menu-nav"></i>
+                <h2>Community</h2>
+            </a>
+            <a href="#" class="nav-myFavorites nav-item">
+                <i class="fa-solid fa-star fa-menu-nav"></i>
+                <h2>My Favorites</h2>
+            </a>
+            <a href="#" class="nav-preferences nav-item">
+                <i class="fa-sharp fa-solid fa-asterisk fa-menu-nav"></i>
+                <h2>Preferences</h2>
+            </a>
+            <hr class="divider">
+            <form class="nav-logOut nav-item" action="/logout?_method=DELETE" method="POST">
+                <i class="fa-solid fa-right-from-bracket fa-menu-nav"></i>
+                <button type="submit">Log Out</button>
+            </form>
+        </div>
+    </nav>
+
+
+
+    <main class="main-container" id="welcome-container">
+        <div class="welcome-section">
+            <div class="welcome-image">
+            </div>
+            <div class="welcome-text">
+                <h2>WELCOME TO E-L.E.A.R.N</h2>
+                <p class="description">E-L.E.A.R.N (Electronic Library for E-Learner's Academic Research and Needs) is an online learning library platform developed to create a learning environment that gives easy access to various resources for the students. This online library focuses on giving the learners more accessible plans on their learning journey to make sure that they don't struggle with their studies.</p>
+                <p class="quote">“The more I read, the more I acquire, the more certain I am that I know nothing.” <br>-VOLTAIRE</p>
+
+            </div>
+        </div>
+    </main>
+    <article class="articles">
+        <h2>Something that might interest you!</h2>
+        <div class="first-article article-item">
+            <a href="" class="calculus-img article-img">
+                <img src="/public/assets/imgs/calculus.jpg" alt="">
+            </a>
+            <p>CALCULUS</p>
+        </div>
+        <div class="second-article article-item">
+            <a href="" class="programming-img article-img">
+                <img src="/public/assets/imgs/programming.jpg" alt="">
+            </a>
+            <p>PROGRAMMING</p>
+        </div>
+        <div class="third-article article-item">
+            <a href="" class="architecture-img article-img">
+                <img src="/public/assets/imgs/architecture.jpg" alt="">
+            </a>
+            <p>ARCHITECTURE</p>
+        </div>
+        <div class="fourth-article article-item">
+            <a href="" class="photography-img article-img">
+                <img src="/public/assets/imgs/photography.jpg" alt="">
+            </a>
+            <p>PHOTOGRAPHY</p>
+        </div>
+        <div class="fifth-article article-item">
+            <a href="" class="sports-img article-img">
+                <img src="/public/assets/imgs/sports.jpg" alt="">
+            </a>
+            <p>SPORTS</p>
+        </div>
+        <div class="sixth-article article-item">
+            <a  href="" class="education-img article-img">
+                <img src="/public/assets/imgs/education.jpg" alt="">
+            </a>
+            <p>EDUCATION</p>
+        </div>
+    </article>
+    <section class="shortcuts">
+            <button class="shortcut-item" href="">
+                <i class="fa-solid fa-file shortcut-icon"></i>
+                <p>My Files</p>
+            </button>
+            <button class="shortcut-item" onclick="location.href='/eLibrary'">
+                <i class="fa-solid fa-book shortcut-icon"></i>
+                <p>E-Library</p>
+            </button>
+            <button class="shortcut-item" href="">
+                <i class="fa-solid fa-play shortcut-icon"></i>
+                <p>E-Videos</p>
+            </button>
+            <button class="shortcut-item" href="">
+                <i class="fa-solid fa-users shortcut-icon"></i>
+                <p>Community</p>
+            </button>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+          <ul class="footer-link-holder" >
+            <li class="footer-link"><a href="">Sign Up</a></li>
+            <li class="footer-link"><a href="">Sign In</a></li>
+            <li class="footer-link"><a href="">Services</a></li>
+            <li class="footer-link"><a href="">Privacy Policy</a></li>
+            <li class="footer-link"><a href="">About</a></li>
+            <li class="footer-link"><a href="">Terms</a></li>
+            <li class="footer-link"><a href="">Help</a></li>
+            <li class="footer-link"><a href="">Contact</a></li>
+          </ul>
+          <div class="copyright">
+            <p>E-LEARN</p>
+            <i class="fa-regular fa-copyright"></i>
+            <p>2023</p>
+          </div>
+        </div>
+        
+      </footer>
+    
+</body>
+</html>

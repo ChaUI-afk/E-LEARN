@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/public/assets/main.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/088b5af8bf.js"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/public/assets/reset.css">
+    <link rel="stylesheet" href="/public/assets/style.css">
+</head>
+<body>
+    <section id="mainContainer" class="main-container">
+        <section class="main-welcome">
+            <section aria-label="Photos" class="main-slider">
+                <div class="carousel" data-carousel>
+                    <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+                    <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+                    <ul data-slides>
+                        <li class="slide" data-active>
+                            <img src="/public/assets/imgs/E-Learn1stBanner.jpg" alt="">
+                        </li>
+                        <li class="slide">
+                            <img src="/public/assets/imgs/pexels-fatma-neda-kekil-10373801.jpg" alt="">
+                        </li>
+                        <li class="slide">
+                            <img src="/public/assets/imgs/pexels-ozan-çulha-15332223.jpg" alt="">
+                        </li>
+                    </ul>    
+                </div>
+            </section>
+        </section>
+        <section class="main-logIn">
+            <div class="eLearn-logo">
+                <div class="logo-holder">
+                    <img src="/public/assets/imgs/E-learn logo.svg" alt="">
+                </div>
+                <h1>E-LEARN</h1>
+            </div>
+            <div class="form-box">
+                <h1>SIGN IN</h1>
+                <% if (messages.error) { %>
+                    <%= messages.error %>
+                  <% } %>
+                <form class="sign-form" action="/login" method="POST">
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input class="input-signIn" type="email" name="email" id="Email" placeholder="Email" />
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input class="input-signIn" type="password" name="password" id="pwd" placeholder="Password" />
+                    </div>
+                    <button onclick="location.href='main.html'" class="signin-Btn log-btn" type="submit">Log In</button>
+                    <div class="forgot-password">
+                        <a href="#"> forgot password? </a>
+                    </div>
+                    <button onclick="location.href='/register'" class="signup-Btn log-btn" type="button">Sign Up</button>
+                </form>
+            </div>
+        </section>
+    </section>
+    
+      <footer class="footer">
+        <div class="footer-container">
+          <ul class="footer-link-holder" >
+            <li class="footer-link"><a href="">Sign Up</a></li>
+            <li class="footer-link"><a href="">Sign In</a></li>
+            <li class="footer-link"><a href="">Services</a></li>
+            <li class="footer-link"><a href="">Privacy Policy</a></li>
+            <li class="footer-link"><a href="">About</a></li>
+            <li class="footer-link"><a href="">Terms</a></li>
+            <li class="footer-link"><a href="">Help</a></li>
+            <li class="footer-link"><a href="">Contact</a></li>
+          </ul>
+          <div class="copyright">
+            <p>E-LEARN</p>
+            <i class="fa-regular fa-copyright"></i>
+            <p>2023</p>
+          </div>
+        </div>
+        
+      </footer>
+    
+    
+</body>
+</html>
